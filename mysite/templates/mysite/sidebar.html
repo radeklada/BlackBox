@@ -1,0 +1,42 @@
+{% extends "mysite/navbar.html" %}
+
+{% load static %}
+
+{% block content %}      
+<link rel="stylesheet" type="text/css" href="{% static 'mysite/sidebar.css' %}">
+{% if user.is_authenticated %}
+<div id="wrapper">
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li>
+            <a href="/wstep">WSTĘP</a>
+        </li>
+        <li>
+            <a href="/podzial-na-klasy-rownowaznosci">PODZIAŁ NA KLASY RÓWNOWAŻNOŚCI</a>
+        </li>
+        <li>
+            <a href="/analiza-wartosci-brzegowych">ANALIZA WARTOŚCI BRZEGOWYCH</a>
+        </li>
+        <li>
+            <a href="/testowanie-w-oparciu-o-tablice-decyzyjna">TESTOWANIE W OPARCIU O TABLICĘ DECYZYJNĄ</a>
+        </li>
+        <li>
+            <a href="/testowanie-przejsc-miedzy-stanami">TESTOWANIE PRZEJŚC MIĘDZY STANAMI</a>
+        </li>
+        <li>
+            <a href="/testowanie-oparte-na-przypadkach-uzycia">TESTOWANIE OPARTE NA PRZYPADKACH UŻYCIA</a>
+        </li>
+        <li>
+            <a href="/jak-pisac-przypadki-testowe">JAK PISAĆ PRZYPADKI TESTOWE</a>
+        </li>
+    </ul>
+</div>
+
+{% block info %}
+{% endblock %}
+
+
+</div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "mysite/add_application.html" %}
+
+{% block tables %}
+
+
+<div class="d-flex justify-content-center">
+
+<table class="table table-hover" style="width: 70%;">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nazwa</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for app in apps %}
+         <tr>
+            <td>{{app.id}}</td>
+            <td>{{app.name}}</td>
+            <td>
+              <a href="/show_tests/{{app.id}}"><button type="button" class="btn btn-primary btn-sm">Pokaż testy</button></a>
+            </td>
+            <td>
+              <a href="/delete_application/{{app.id}}"><button type="button" class="btn btn-primary btn-sm">Usuń</button></a>
+            </td>
+         </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+
+{% endblock %}

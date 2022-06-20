@@ -1,0 +1,42 @@
+{% extends "mysite/sidebar.html" %}
+
+
+{% load static %}
+{% block info %}
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Wstęp</h1>
+                <p>Testowanie oprogramowania obejmuje wiele rodzajów testów i jako testerzy oprogramowania musimy zrozumieć, w jaki sposób jest wykonywany każdy test. Wśród różnych typów testów jednym z najbardziej mylących tematów jest testowanie czarnoskrzynkowe i testowanie białoskrzynkowe. Wielu testerów oprogramowania zastanawia się, czy istnieją jakieś podobieństwa między tymi dwoma rodzajami testowania.</p>
+                <p>W obrębie testowania czarnoskrzynkowego znajdują się techniki testowania oraz projektowania przypadków testowych, które opierają się o specyfikację modułu lub systemu. Mogą być wykorzystywane do testów funkcjonalnych i niefunkcjonalnych. Techniki czarnoskrzynkowe (behawioralne) opierają się na analizie podstaw testów, takich jak formalna dokumentacja z wymaganiami, specyfikacjami, ścieżkami użytkowników, opisami procesów biznesowych. Koncentrują się na danych wejściowych i wyjściowych obiektu testowego bez odniesienia do ich wewnętrznej struktury[1].</p>
+                <p>Narzędzia do testowania czarnej skrzynki to przede wszystkim narzędzia do nagrywania i odtwarzania. Narzędzia te służą do testowania regresji w celu sprawdzenia, czy nowe kompilacje powodują błędy we wcześniej uruchomionych funkcjach aplikacji. Te narzędzia do nagrywania i odtwarzania rejestrują przypadki testowe jako skrypty, takie jak TSL, VB Script, JavaScript, Perl.</p>
+                <p>W rzeczywistości możliwych jest kilka rodzajów testowania czarnej skrzynki, ale jeśli weźmiemy pod uwagę jego główne warianty, poniżej wymieniono dwa podstawowe. Testowanie funkcjonalne to typ odnoszący się do wymagań funkcjonalnych lub specyfikacji aplikacji. Tutaj testowane są różne działania lub funkcje systemu, dostarczane są dane wejściowe i porównywane są rzeczywiste dane wyjściowe z oczekiwanymi. Oprócz funkcjonalności wymagań istnieją pewne niefunkcjonalne aspekty, które należy przetestować, aby poprawić jakość i wydajność aplikacji.</p>
+                <p><cite>Rysunek 1 Testowanie czarnoskrzynkowe</cite></p>
+                <p><img src="{% static 'mysite/images/Obraz1.png' %}" alt="Rysunek 1 Testowanie czarnoskrzynkowe" class="center" /></p>
+                <p>Ta metoda jest zwykle wybierana przez testerów, którzy nie zupełnie rozumieją wewnętrznej struktury systemu. Oznacza to, że tester spogląda na system albo aplikację od wewnątrz – przejmując rolę użytkownika końcowego. Testy czarnoskrzynkowe wykorzystywane są przez osoby, które nie są autorami danego oprogramowania. Jak wspomniane zostało wcześniej, testowanie czarnoskrzynkowe może odnosić się do testowania funkcjonalnego, a więc do weryfikacji „co system powinien, a czego nie powinien robić”. W tym przypadku testerzy powinni wiedzieć, jakie cechy ma zawierać produkt, ale nie mają oni wiedzy, jak działają algorytmy lub systemy wewnętrzne. Praktycznym przykładem takiego podejścia jest testowanie płatności z informacjami ze ścieżki użytkownika[2].</p>
+                <p>Oto ważne cechy testów czarnoskrzynkowych:</p>
+                <ul>
+                    <li>Warunki testowe, przypadki testowe i dane testowe są oparte na podstawie testów — mogą to być wymagania, specyfikacje lub ścieżki użytkownika związane z oprogramowaniem;</li>
+                    <li>Przypadki testowe można wykorzystać do wykrycia potencjalnych rozbieżności między wymaganiami a ich implementacją lub odchyleń od wymagań;</li>
+                    <li>Pokrycie jest mierzone z uwzględnieniem testowanych elementów podstawy testów oraz techniki zastosowanej do podstawy testów.</li>
+                </ul>
+                <p>Pośród testów czarnoskrzynkowych wyróżnia się:</p>
+                <ul>
+                    <li>Podział równoważności,</li>
+                    <li>analizę wartości brzegowych,</li>
+                    <li>testowanie oparte na tabeli decyzyjnej,</li>
+                    <li>testowanie przejść między stanami,</li>
+                    <li>testowanie oparte na przypadkach użycia.</li>
+                </ul>
+                <div>
+                    <p>_____________</p>
+                    <p>[1] Baszuro, P. (2019) U mnie działa: język branży IT  / Paweł Baszuro. Gliwice: Helion.</p>
+                    <p>[2] Jadczyk, K. (2021) Pasja testowania / Krzysztof Jadczyk. Wydanie II rozszerzone. Gliwice: Helion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

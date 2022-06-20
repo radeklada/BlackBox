@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (aplikacja_do_testowania_po_polsku)" project-jdk-type="Python SDK" />
+  <component name="UnattendedHostPersistenceState">
+    <option name="openedFilesInfos">
+      <list>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/opisy/intro.html" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="97" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/urls.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/homepage.html" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="994" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/views.py" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="798" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/apptesting/urls.py" />
+        </OpenedFileInfo>
+      </list>
+    </option>
+  </component>
+</project>

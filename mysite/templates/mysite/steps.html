@@ -1,0 +1,32 @@
+{% extends "mysite/add_step.html" %}
+
+{% block tables %}
+
+<h4>Kroki dla testu: {{test_name}}, dla aplikacji: {{app_name}}</h4>
+<div class="d-flex justify-content-center">
+
+<table class="table table-hover" style="width: 70%;">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Opis</th>
+        <th scope="col">Warunki początkowe</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for step in steps %}
+         <tr>
+            <td>{{step.id}}</td>
+            <td>{{step.description}}</td>
+            <td>{{step.requirements}}</td>
+            <td>
+              <a href="/delete_step/{{step.test.id}}/{{step.id}}"><button type="button" class="btn btn-primary btn-sm">Usuń</button></a>
+            </td>
+         </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% endblock %}
