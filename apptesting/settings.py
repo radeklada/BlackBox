@@ -24,7 +24,7 @@ SECRET_KEY = 'd+xvo7kll^jouaj-nglu7p6n=m*ytd&v#%4fla(2y9u_=o__bf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['brzoza.wzks.uj.edu.pl']
+ALLOWED_HOSTS = ['brzoza.wzks.uj.edu.pl', '127.0.0.1']
 
 
 # Application definition
