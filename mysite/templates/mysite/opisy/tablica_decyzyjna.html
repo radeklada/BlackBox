@@ -1,13 +1,36 @@
 {% extends "mysite/sidebar.html" %}
 
 
+{% load static %}
 {% block info %}
 <div id="page-content-wrapper">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <h1>TESTOWANIE W OPARCIU O TABLICĘ DECYZYJNĄ</h1>
-                <p>miejsce na opis</p>
+                <p>Testowanie tabel decyzyjnych jest powszechną techniką w przypadku złożonych reguł biznesowych, które należy zaimplementować w systemie. Opracowując tablice decyzyjne, testerzy identyfikują dane wejściowe (warunki) i wynikające z nich warunki wyjściowe (działania). Wszystko sprowadza się do stworzenia tabeli z wierszami i kolumnami, z warunkami na górze i akcjami na dole. Ta kolumna jest powiązana z regułą decyzyjną, która definiuje unikalną kombinację warunków, które powodują wykonanie akcji powiązanej z regułą. Wartości w polach tabeli są zwykle logiczne (prawda lub fałsz), rzadziej numeryczne (np. 0 dla fałszu, 1 dla prawdy) lub kolor[8].</p>
+                <p>Wypełniona tabela decyzyjna składa się z kolumn (przypadków testowych), których ilość zależna jest od potrzeb, aby objąć wszystkie kombinacje warunków. Można zmniejszyć liczbę przypadków testowych, na przykład usuwając kolumny opisujące niemożliwe kombinacje warunków. W praktyce zwykle minimalnym wymogiem pokrycia jest utworzenie co najmniej jednego przypadku testowego dla każdej reguły decyzyjnej w tabeli. Zwykle musi to obejmować wszystkie kombinacje warunków[9].</p>
+                <p>Tabele decyzyjne są jedną z podstawowych technik stosowanych do rozwiązywania problemów i podejmowania decyzji. Za pomocą tablic decyzyjnych można zwięźle zdefiniować działania, które należy podjąć w określonych warunkach. Tabela decyzyjna to specyficzna struktura opisu zestawu powiązanych reguł decyzyjnych.</p>
+                <p>Każda tablica podzielona jest na cztery zasadnicze pola:</p>
+                <ol>
+                    <li>Warunki - sformułowanie warunków niezbędnych w procesie decydowania, określenie zmiennych mających wpływ na proces decyzyjny,</li>
+                    <li>Czynności - działania, decyzje, wyszczególnienie wszystkich możliwych czynności, które mogą być zrealizowane przy założeniu, że zaistniała określona kombinacja warunków ujętych w pierwszym polu tablicy,</li>
+                    <li>Wybór warunków - w tym polu, zaprezentowane są wszelkie stany poszczególnych warunków, wskaźników, kryteriów. Symbol umieszczony w tym polu oznacza, czy dany warunek został spełniony czy też nie (z reguły stosuje się symbolikę: "1" warunek spełniony, "0" warunek niespełniony, " - " warunek nie jest znaczący).</li>
+                    <li>Wybór czynności - zawiera symbole identyfikujące czynności odpowiadające danemu układowi warunków (stosowane są symbole "X" - czynność ma być podjęta, " - " czynności nie należy podejmować.</li>
+                </ol>
+                <p>Niezaprzeczalną zaletą tej techniki jest możliwość wykrywania luk w wymaganiach. Identyfikuje również wszystkie kluczowe kombinacje warunków, które można zignorować lub zignorować dla różnych typów testów czarnoskrzynkowych. Służy do różnych kombinacji warunków.</p>
+                <p>Aby przejrzeć prawdziwy przykład, załóżmy, że testujemy proces wysyłania e-maili reklamowych do klientów danego sklepu. Użytkownicy muszą wypełnić krótką ankietę z umową marketingową i opcjonalnymi danymi kontaktowymi w celu weryfikacji[10].</p>
+                <span>
+                    <small class="center">Rysunek 5 Przykładowa tabela decyzyjna</small>
+                    <img src="{% static 'mysite/images/Obraz5.png' %}" alt="Rysunek 5 Przykładowa tabela decyzyjna" class="center" />
+                </span>
+                <p>W sytuacji, gdy do przetestowania jest 2^n przypadków - n to liczba warunków początkowych. W naszym przypadku były to pytania dotyczące maili, kontraktów marketingowych oraz weryfikacji poprawności maili. Z powyższej analizy wynika, że mamy 8 przypadków testowych. Pierwszy z nich wysyła e-mail poprawnie, pozostałych 7 w ogóle nie wysyła. Jak widać, niektóre sytuacje nie mogą się zdarzyć jednocześnie (T2 i T3). Dlatego stosujemy techniki optymalizacji, usuwając kolumny, które nie mają sensu do testowania.</p>
+                <div>
+                    <p>_____________</p>
+                    <p>[8] Wrycza S. Projektowanie systemów informatycznych, Wydawnictwo Uniwersytetu Gdańskiego, Gdańsk 1997, s. 21.</p>
+                    <p>[9] Witkowski T. Decyzje w zarządzaniu przedsiębiorstwem, Wydawnictwa Naukowo-Techniczne, Warszawa 2000, s. 48.</p>
+                    <p>[10] Grażyński, A. Myers, G. J. (2005) Sztuka testowania oprogramowania: nowoczesne techniki i zasady testowania aplikacji / Glenford J. Myers [tł. Andrzej Grażyński]. Gliwice: Wydawnictwo Helion, s. 45.</p>
+                </div>
             </div>
         </div>
     </div>

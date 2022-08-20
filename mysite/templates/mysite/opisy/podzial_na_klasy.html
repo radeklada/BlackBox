@@ -1,6 +1,7 @@
 {% extends "mysite/sidebar.html" %}
 
 
+{% load static %}
 {% block info %}
 <div id="page-content-wrapper">
     <div class="container-fluid">
@@ -20,11 +21,28 @@
                 <li>klasa wartości niepoprawnych (-∞; 30) oraz (85; ∞);</li>
                 <li>klasa wartości poprawnych <30; 85>.</li>
                 </ul>
-                <p></p>
+                <p>Wartości dla przypadków testowych:</p>
+                <ul>
+                    <li>dla testów klasy wartości poprawnej: 50;</li>
+                    <li>dla testów klas wartości niepoprawnych: 20; 90.</li>
+                </ul>
+                <p>Obliczanie pokrycia:</p>
+                <ul>
+                    <li>1 przypadek testowy dla pokrycia klasy wartości poprawnej;</li>
+                    <li>2 przypadki testowe dla pokrycia klas wartości niepoprawnych.</li>
+                </ul>
+                <p>Wszystkie liczby z zakresu od 30 do 85 (w tym liczby od 30 do 85, ponieważ w zadaniu mamy informację, że te wartości mieszczą się w prawidłowej klasie równoważności: między 30°C a 85°C) będą prawidłowymi wartościami - Pralka będzie działać normalnie. Jednak wszystkie liczby mniejsze niż 30 i większe niż 85 będą wartościami błędnymi – pralka nie będzie działać prawidłowo.</p>
+                <p>Partycjonowanie równoważności opiera się na dzieleniu danych na grupy, które nazywane są klasami równoważności, tak aby każda grupa zawierała elementy, które należy traktować w ten sam sposób. Klasy równoważności można określić dla poprawnych wartości, które moduł lub system powinien akceptować oraz dla nieważnych wartości, które muszą zostać odrzucone. Klasy mogą być dalej podzielone na podklasy w razie potrzeby. Należy jednak pamiętać, że każda pojedyncza wartość może należeć tylko do jednej klasy równoważności[5].</p>
+                <span>
+                    <small class="center">Rysunek 2 Wizualizacja właściwego podziału klas</small>
+                    <img src="{% static 'mysite/images/Obraz2.png' %}" alt="Rysunek 2 Wizualizacja właściwego podziału klas" class="center" />
+                </span>
+                <p>Uzyskanie 100% pokrycia jest uzależnione od przypadków testowych wykorzystujących wszystkie zidentyfikowane klasy równoważności (w tym nieodpowiednie klasy), co wymaga przetestowania co najmniej jednej wartości z każdej klasy.</p>
                 <div>
                     <p>_____________</p>
-                    <p>[3] Roman, A. Stapp, L. (2020) Certyfikowany tester ISTQB®: poziom podstawowy / Adam Roman, Lucjan Stapp. Gliwice: Helion.</p>
-                    <p>[4] Dąbrowski, M. (2021) Wieczne opóźnienie. Zarządzanie projektami IT / Marcin Dąbrowski. Gliwice: Helion.</p>
+                    <p>[3] Roman, A. Stapp, L. (2020) Certyfikowany tester ISTQB®: poziom podstawowy / Adam Roman, Lucjan Stapp. Gliwice: Helion, s. 67.</p>
+                    <p>[4] Dąbrowski, M. (2021) Wieczne opóźnienie. Zarządzanie projektami IT / Marcin Dąbrowski. Gliwice: Helion, s. 43.</p>
+                    <p>[5] Roman, A. (2015) Testowanie i jakość oprogramowania: modele, techniki, narzędzia / Adam Roman. Warszawa: Wydawnictwo Naukowe PWN, s. 54.</p>
                 </div>
             </div>
         </div>

@@ -1,13 +1,42 @@
 {% extends "mysite/sidebar.html" %}
 
 
+{% load static %}
 {% block info %}
 <div id="page-content-wrapper">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <h1>Analiza wartosci brzegowych </h1>
-                <p>miejsce na opis</p>
+                <p>Patrząc na przykład z życia - przetestowanie działania wypłaty z bankomatu. Bankomaty przetwarzają wypłaty od 50 do 2000 USD. Na podstawie tej wiedzy można zdefiniować odpowiednie oraz nieodpowiednie zajęcia. Prawidłowy poziom wynosi od 50 do 2000 USD, ponieważ bankomaty są w stanie dokonywać takich wypłat. Jednak dodatkowo w tym przypadku są dwie błędne kategorie – kwoty poniżej 50 USD i powyżej 2000 USD, co nie było możliwe w testowanych bankomatach.</p>
+                <span>
+                    <small class="center">Rysunek 3 Przedziały wartości nieakceptowalnych</small>
+                    <img src="{% static 'mysite/images/Obraz3.png' %}" alt="Rysunek 3 Przedziały wartości nieakceptowalnych" class="center" />
+                </span>
+                <p>Do testów powinny zostać wybrany przynajmniej jednen przedstawiciel z każdej klasy, np.:</p>
+                <ul>
+                    <li>20 USD za pierwszą niewłaściwą klasę,</li>
+                    <li>200 USD za odpowiednią klasę,</li>
+                    <li>3000 USD za drugą niewłaściwą klasę.</li>
+                </ul>
+                <p>Ta technika jest nieco rozszerzeniem partycjonowania równoważności, ale może być używana tylko dla uporządkowanych klas z wartościami liczbowymi. Dlatego odcięcia będą wartościami minimalnymi i maksymalnymi dla każdej klasy równoważności.</p>
+                <p>Innym ciekawym przykładem jest badanie poziomu wody w rzece. Akceptowalny i bezpieczny poziom to 3 do 5 metrów. Powyżej tego poziomu wzrasta ryzyko przelania się wody przez tamę. Z drugiej strony poniżej bezpiecznych poziomów doświadczamy suszy, która również ma negatywne skutki. W tym przypadku można rozróżnić 3 klasy równoważności — właściwą oraz dwie niewłaściwe[6]:</p>
+                <ul>
+                    <li>Właściwa klasa zawiera wartości od 3 do 5 metrów,</li>
+                    <li>Niewłaściwa klasa zawierająca wartości zbyt niskie — od 0 do 3 metrów (bez 3),</li>
+                    <li>Niewłaściwa klasa zawierająca wartości, które są zbyt wysokie — powyżej 5 metrów.</li>
+                </ul>
+                <span>
+                    <small class="center">Rysunek 4 Badanie poziomu wody w rzece</small>
+                    <img src="{% static 'mysite/images/Obraz4.png' %}" alt="Rysunek 4 Badanie poziomu wody w rzece" class="center" />
+                </span>
+                <p>Istnieje jednak wariant tej techniki, który testuje 3 wartości graniczne (tzw. technika trzypunktowa) - wartość graniczna, wartość przed wartością brzegową i wartość za wartością brzegową. Jeżeli w powyższym przypadku przyjmiemy, że poziom wody jest mierzony co 0,5 metra, to przetestujemy następujące poziomy wody: 2,5, 3, 3,5, 4,5, 5 i 5,5 metra.</p>
+                <p>Pisząc kod, często używa się warunków do ustalenia granic, ponieważ awarie systemu często częściej występują na granicach niż wartości wewnętrznych klas równoważności, np.: jeśli (x >5), inaczej, jeśli (x < 3). Dlatego zastosowanie tej techniki jest bardzo ważne i użyteczne. Możemy go również użyć do testowania wymagań dotyczących zakresu liczb, godzin i dat, takich jak testowanie wyświetlania banerów reklamowych przez określony czas[7].</p>
+                <div>
+                    <p>_____________</p>
+                    <p>[6] Grażyński, A. Myers, G. J. (2005) Sztuka testowania oprogramowania: nowoczesne techniki i zasady testowania aplikacji / Glenford J. Myers [tł. Andrzej Grażyński]. Gliwice: Wydawnictwo Helion, s. 23.</p>
+                    <p>[7] Roman, A., Stapp, L. (2020) Certyfikowany tester ISTQB®: poziom podstawowy / Adam Roman, Lucjan Stapp. Gliwice: Helion, s. 98.</p>
+                </div>
             </div>
         </div>
     </div>

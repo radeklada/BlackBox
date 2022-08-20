@@ -1,13 +1,29 @@
 {% extends "mysite/sidebar.html" %}
 
 
+{% load static %}
 {% block info %}
 <div id="page-content-wrapper">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <h1>TESTOWANIE PRZEJŚC MIĘDZY STANAMI</h1>
-                <p>miejsce na opis</p>
+                <p>Testowanie przejść między stanami to technika czarnoskrzynkowa, którą można zastosować do testowania „maszyny skończonej”. „Maszyna skończona” (FSM) to system, który będzie znajdować się w różnych dyskretnych stanach (np. „gotowy”, „nie gotowy”, „włączony”, „wyłączony”...) w zależności od sygnału wejściowego lub bodźca. Dyskretny stan, w którym kończy się system, zależy od reguł przejścia systemu. Oznacza to, że system jest systemem o skończonym stanie, jeśli zapewnia różne wyjścia dla tego samego wejścia w zależności od poprzedniego stanu.  Ponadto, w sytuacji, gdy transakcje są testowane w systemie, nazywa się to „pokryciem przełącznika 0”. Jeśli test dotyczy 2 ważnych transakcji, jest to pokrycie „1 konwersją” i tak dalej. Technika przejścia stanów to dynamiczna technika testowania stosowana, gdy system jest zdefiniowany w kategoriach ograniczonej liczby stanów, a przejścia stanów są regulowane przez reguły systemu. Innymi słowy, ta technika jest używana, gdy cechy systemu są reprezentowane jako stany połączone ze sobą. Konwersja jest określona przez zasady oprogramowania[11].</p>
+                <span>
+                    <small class="center">Rysunek 6 Graficzne przedstawienie testowania przejść</small>
+                    <img src="{% static 'mysite/images/Obraz6.png' %}" alt="Rysunek 6 Graficzne przedstawienie testowania przejść" class="center" />
+                </span>
+                <p>Po wyjaśnieniu i zrozumieniu, czym jest zmiana stanu, można teraz zdefiniować test zmiany stanu w bardziej znaczący sposób. Jest to więc rodzaj testowania czarnej skrzynki, w którym tester musi przetestować zachowanie funkcji AUT (aplikacja w toku) względem różnych warunków wejściowych podanych w sekwencji.</p>
+                <p>Historia aktywności i zachowania systemu śledzonego od momentu uruchomienia może być reprezentowana przez elementy stanu. Do zilustrowania możliwych stanów systemu i transferów między nimi możemy użyć diagramów — graficzne reprezentacje zdarzeń i działań, które powodują. To samo zdarzenie może skutkować dwoma lub więcej przejściami, np. kliknięcie przycisku „Wyślij” na formularzu wniosku może skutkować wyświetleniem informacji i komunikatów o błędach, że formularz został wysłany poprawnie. Tabela przejść stanów zawiera wszystkie prawidłowe i nieprawidłowe przejścia stanów oraz powiązane zdarzenia i akcje. Z drugiej strony diagramy zazwyczaj ograniczają się do poprawnych przekształceń, czyli poprawnego zachowania systemu. W zależności od celu, technika ta może być wykorzystana do testowania stanów, poprawności przejść między nimi oraz błędnych przejść. Jest szeroko stosowany w aplikacjach, które mają rozwijane menu, w których użytkownik może wybierać spośród dostępnych opcji lub graficznej reprezentacji nawigacji na ekranie.</p>
+                <span>
+                    <small class="center">Rysunek 7 Przykładowy diagram przejść między stanami w przypadku z dostępnym menu</small>
+                    <img src="{% static 'mysite/images/Obraz7.png' %}" alt="Rysunek 7 Przykładowy diagram przejść między stanami w przypadku z dostępnym menu" class="center" />
+                </span>
+                <p>W tym przypadku stanem początkowym jest menu główne gry. Strzałki pokazują prawdopodobieństwo przejść między stanami (kropki skierowane w jednym kierunku oznaczają przejścia jednokierunkowe, a strzałki skierowane w dwa kierunki wskazują możliwości dwukierunkowych przejść między sąsiednimi stanami). Z menu głównego możemy wybrać jedną z dostępnych opcji: wyjść z gry, wczytać grę, wejść do pomocy lub przejść do opcji takich jak zmiana klawiszy sterujących. Otwierając przypadek testowy, tester musi wziąć pod uwagę nie tylko poprawne przejścia, ale także nieprawidłowe przejścia, takie jak próba kliknięcia dwóch przycisków jednocześnie i sprawdzenie zachowania aplikacji.</p>
+                <div>
+                    <p>_____________</p>
+                    <p>[11] Roman, A. (2015) Testowanie i jakość oprogramowania: modele, techniki, narzędzia / Adam Roman. Warszawa: Wydawnictwo Naukowe PWN, s. 34.</p>
+                </div>
             </div>
         </div>
     </div>
