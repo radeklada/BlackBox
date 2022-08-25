@@ -14,7 +14,7 @@ from .models import Application, Test, TestStep
 
 # Create your views here.
 def home(request):
-    return redirect('/apptesting/wstep')
+    return redirect('mysite:wstep')
 
 
 # rejstracja uzytkownikow
@@ -179,41 +179,32 @@ def delete_step(request, test_id, step_id):
 
 # wyswietlanie opisow i informacji dla odpowiednich podstron
 def wstep(request):
-    print('dupa')
     return render(request, template_name="mysite/opisy/intro.html")
 
 
 def podzial_na_klasy_rownowaznosci(request):
-    if request.user.is_authenticated:
-        return render(request, template_name="mysite/opisy/podzial_na_klasy.html")
-    return redirect('mysite:home')
+    return render(request, template_name="mysite/opisy/podzial_na_klasy.html")
 
 
 def analiza_wartosci_brzegowych(request):
-    if request.user.is_authenticated:
-        return render(request, template_name="mysite/opisy/wartosci_brzegowe.html")
-    return redirect('mysite:home')
+    return render(request, template_name="mysite/opisy/wartosci_brzegowe.html")
 
 
 def testowanie_w_oparciu_o_tablice_decyzyjna(request):
-    if request.user.is_authenticated:
-        return render(request, template_name="mysite/opisy/tablica_decyzyjna.html")
-    return redirect('mysite:home')
+    return render(request, template_name="mysite/opisy/tablica_decyzyjna.html")
 
 
 def testowanie_przejsc_miedzy_stanami(request):
-    if request.user.is_authenticated:
-        return render(request, template_name="mysite/opisy/przejscia_miedzy_stanami.html")
-    return redirect('mysite:home')
+    return render(request, template_name="mysite/opisy/przejscia_miedzy_stanami.html")
 
 
 def testowanie_oparte_na_przypadkach_uzycia(request):
-    if request.user.is_authenticated:
-        return render(request, template_name="mysite/opisy/przypadki_uzycia.html")
-    return redirect('mysite:home')
+    return render(request, template_name="mysite/opisy/przypadki_uzycia.html")
 
 
 def jak_pisac_przypadki_testowe(request):
-    if request.user.is_authenticated:
-        return render(request, template_name="mysite/opisy/jak_pisac_przypadki.html")
-    return redirect('mysite:home')
+    return render(request, template_name="mysite/opisy/jak_pisac_przypadki.html")
+
+
+def about(request):
+    return render(request, template_name="mysite/opisy/about.html")

@@ -24,10 +24,10 @@
             <td>{{test.result}}</td>
             <td>{{test.date}}</td>
             <td>
-              <a href="/show_steps/{{test.id}}"><button type="button" class="btn btn-primary btn-sm">Pokaż kroki</button></a>
+              <a href="/apptesting/show_steps/{{test.id}}"><button type="button" class="btn btn-primary btn-sm">Pokaż kroki</button></a>
             </td>
             <td>
-              <a href="/delete_test/{{app_id}}/{{test.id}}"><button type="button" class="btn btn-primary btn-sm">Usuń</button></a>
+              <a href="/apptesting/delete_test/{{app_id}}/{{test.id}}"><button type="button" class="btn btn-primary btn-sm">Usuń</button></a>
             </td>
          </tr>
         {% endfor %}

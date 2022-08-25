@@ -11,7 +11,7 @@
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/wstep">Czarnoskrzynkowe techniki testowania</a>
+          <a class="navbar-brand" href="/apptesting/wstep">Czarnoskrzynkowe techniki testowania</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -19,23 +19,23 @@
             <ul class="navbar-nav ms-auto">
               {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="/show_applications">Aplikacje</a>
+                <a class="nav-link" href="/apptesting/show_applications">Aplikacje</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/show_all_tests">Wszystkie testy</a>
+                <a class="nav-link" href="/apptesting/show_all_tests">Wszystkie testy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/wstep">Informacje</a>
+                <a class="nav-link" href="/apptesting/wstep">Informacje</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/logout">Wyloguj</a>
+                <a class="nav-link" href="/apptesting/logout">Wyloguj</a>
               </li>
               {% else %}
               <li class="nav-item">
-                <a class="nav-link" href="/login">Zaloguj</a>
+                <a class="nav-link" href="/apptesting/login">Zaloguj</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/register">Zarejstruj</a>
+                <a class="nav-link" href="/apptesting/register">Zarejstruj</a>
               </li>
               {% endif %}
             </ul>

@@ -36,5 +36,6 @@ urlpatterns = [
         path("testowanie-oparte-na-przypadkach-uzycia", views.testowanie_oparte_na_przypadkach_uzycia,
              name="testowanie-oparte-na-przypadkach-uzycia"),
         path("jak-pisac-przypadki-testowe", views.jak_pisac_przypadki_testowe, name="jak-pisac-przypadki-testowe"),
+        path("about", views.about, name="about"),
     ]))
 ]
