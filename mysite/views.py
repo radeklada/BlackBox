@@ -1,7 +1,7 @@
 from cgi import test
 from re import template
 from urllib import response
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from .forms import NewApplicationForm, NewUserForm, NewTestForm, NewStepForm
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
@@ -67,7 +67,7 @@ def show_applications(request):
             if form.is_valid():
                 n = form.cleaned_data['name']
                 Application.objects.create(owner=request.user, name=n)
-                return redirect('mysite:show_applications')
+                return redirect(reverse('mysite:show_applications'))
 
         form = NewApplicationForm()
 
@@ -85,7 +85,7 @@ def delete_application(request, id):
         app = Application.objects.get(pk=id)
         if app.owner == request.user:
             app.delete()
-            return redirect('mysite:show_applications')
+            return redirect(reverse('mysite:show_applications'))
     return HttpResponseForbidden()
 
 
@@ -103,7 +103,7 @@ def show_tests(request, id):
                 res = form.cleaned_data['result']
                 if app_.owner == request.user:
                     Test.objects.create(app=app_, name=n, result=res)
-                    return redirect('/show_tests/' + str(id))
+                    return redirect(reverse('mysite:show_all_tests'))
 
         form = NewTestForm()
 
@@ -124,7 +124,7 @@ def delete_test(request, app_id, test_id):
             # znajduje odpowiedni test
             t = Test.objects.get(pk=test_id)
             t.delete()
-            return redirect('/show_tests/' + str(app_id))
+            return redirect(reverse('mysite:show_all_tests'))
     return HttpResponseForbidden()
 
 
@@ -153,7 +153,7 @@ def show_steps(request, id):
                     desc = form.cleaned_data['description']
                     req = form.cleaned_data['requirements']
                     TestStep.objects.create(test=test_, description=desc, requirements=req)
-                    return redirect('/show_steps/' + str(id))
+                    return redirect(reverse('mysite:show_all_tests'))
             # jesli byl GET to znaczy ze uzytkownik nie wypelnil jeszcze formularza dodania wiec wyswietlam wczesniejsze dane i pusty formularz
             form = NewStepForm()
             if test_.app.owner == request.user:
@@ -173,7 +173,7 @@ def delete_step(request, test_id, step_id):
             # znajduje odpowiedni krok
             s = TestStep.objects.get(pk=step_id)
             s.delete()
-            return redirect('/show_steps/' + str(test_id))
+            return redirect(reverse('mysite:show_all_tests'))
     return HttpResponseForbidden()
 
 
