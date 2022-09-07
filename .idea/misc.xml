@@ -5,24 +5,28 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
+          <option name="caretOffset" value="4520" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/opisy/intro.html" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="97" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/urls.py" />
+          <option name="caretOffset" value="4213" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/opisy/podzial_na_klasy.html" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="4308" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/opisy/przejscia_miedzy_stanami.html" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="4947" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/opisy/przypadki_uzycia.html" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="4608" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/opisy/tablica_decyzyjna.html" />
         </OpenedFileInfo>
         <OpenedFileInfo>
           <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/homepage.html" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="994" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/views.py" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
-          <option name="caretOffset" value="798" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/apptesting/urls.py" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/mysite/templates/mysite/opisy/wartosci_brzegowe.html" />
         </OpenedFileInfo>
       </list>
     </option>
